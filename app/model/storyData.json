@@ -1,0 +1,122 @@
+{
+    "guid": "8f7183c1-1c59-4cd6-8667-2819b19e925d",
+    "externalId": "568732995",
+    "externalType": "1",
+    "resources": [
+        {
+            "type": "slug",
+            "externalId": "103943429",
+            "title": "The Two-Way",
+            "href": "https://www.npr.org/103943429"
+        },
+        {
+            "type": "title",
+            "value": "Feds File New Charges Against Undocumented Immigrant In Kate Steinle Case"
+        },
+        {
+            "type": "lastPublishDate",
+            "value": "2017-12-05T22:54:28-05:00"
+        },
+        {
+            "type": "author",
+            "title": "Richard Gonzales",
+            "orgTitle": "Programming Staff and Contributors",
+            "familyNames": "Gonzales",
+            "givenNames": "Richard",
+            "scope": "preview"
+        },
+        {
+            "type": "organization",
+            "value": "NPR"
+        },
+        {
+            "type": "image",
+            "externalId": "568733393",
+            "title": "Jose Ines Garcia Zarate, acquitted last week of killing Kate Steinle in San Francisco, now faces federal gun and immigration charges.",
+            "attribution": "AP",
+            "primary": true,
+            "crops": [
+                {
+                    "cropType": "standard",
+                    "primary": true,
+                    "href": "https://media.npr.org/assets/img/2017/12/05/ap_16181692684594.jpg",
+                    "mediaType": "image/jpeg"
+                },
+                {
+                    "cropType": "square",
+                    "primary": false,
+                    "href": "https://media.npr.org/assets/img/2017/12/05/ap_16181692684594_sq.jpg",
+                    "mediaType": "image/jpeg"
+                },
+                {
+                    "cropType": "wide",
+                    "primary": false,
+                    "href": "https://media.npr.org/assets/img/2017/12/05/ap_16181692684594_wide.jpg",
+                    "mediaType": "image/jpeg"
+                },
+                {
+                    "cropType": "enlargement",
+                    "primary": false,
+                    "href": "https://media.npr.org/assets/img/2017/12/05/ap_16181692684594.jpg",
+                    "mediaType": "image/jpeg"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "A federal grand jury has <a href=\"https://www.justice.gov/opa/press-release/file/1015981/download?utm_medium=email&utm_source=govdelivery\">indicted</a> the undocumented immigrant who was acquitted last week of murder and manslaughter charges in the case of Kate Steinle. The Mexican national, Jose Ines Garcia Zarate, will face new immigration and gun charges."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "That case drew national attention after then-candidate Donald Trump raised it as a justification for his proposed crackdown on illegal immigration and sanctuary cities."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "Garcia Zarate has been indicted on charges of being a felon in possession of a firearm and ammunition and for being an illegally present alien on possession of a firearm. Either violation carries a maximum penalty of 10 years in prison."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "Last week a San Francisco jury found Garcia Zarate, 45, <a href=\"https://www.npr.org/sections/thetwo-way/2017/11/30/567625700/jury-in-san-francisco-finds-accused-killer-of-kate-steinle-not-guilty-of-murder\">not guilty</a> of murdering the 32-year-old Kate Steinle as she was walking along a city pier two years ago. The jury apparently agreed with the defense which argued that a single shot killed Steinle accidentally after it ricocheted off of the ground before striking her in the back. But the jury did convict him of being a felon with a gun. Garcia Zarate's defense attorneys say they will <a href=\"http://www.sfgate.com/news/article/Kate-Steinle-shooting-Defense-wants-12404547.php\">appeal</a> that conviction which carries a maximum penalty of three years in prison."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "The day after the trial, federal authorities said they would seek to gain custody of Garcia Zarate and <a href=\"https://www.npr.org/sections/thetwo-way/2017/12/01/567908872/arrest-warrant-issued-for-undocumented-immigrant-acquitted-in-steinle-murder-tri\">eventually deport him</a>."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "The new charges appear to signal that federal authorities hope to try, convict and incarcerate the five-time deportee before he is ultimately expelled from the U.S."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "In San Francisco, reaction to the not-guilty verdict persists. San Francisco District Attorney George Gascón said the jury's decision was \"hard to receive.\" He also rejected the criticism of Public Defender Jeff Adachi who said that the DA's office over-charged the case. Prosecutors never offered jurors a motive for Steinle's killing."
+        },
+        {
+            "type": "text",
+            "blockTag": "none",
+            "paragraph": "Gascon also criticized President Trump and conservative pundits for turning the trial into a \"political football.\""
+        }
+    ],
+    "userData": {
+        "viewState": "UNSEEN",
+        "actionPayload": {
+            "uid": "568732995",
+            "action": "",
+            "timestamp": "",
+            "screen": "",
+            "screenPosition": 0,
+            "origin": "STORY",
+            "renderType": "",
+            "href": "https://stage4-reading.api.npr.org/v1/news-app/stories/actions"
+        }
+    },
+    "_meta": {
+        "lastModified": "2017-12-05T22:54:28-05:00"
+    }
+}

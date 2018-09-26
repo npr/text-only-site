@@ -1,6 +1,9 @@
 //load expess
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+const story = require('../story.js');
+
 const publicPath = path.join(__dirname, '../public');
 const port = process.env.PORT || 3000;
 //make new express app- call express as a function
