@@ -1,11 +1,14 @@
 const fs = require('fs');
 
-var getParagraph = (title) => {
-  const = storyData;
+// var getParagaph = (storyData) =>{
+//   for (var i= 0; i < storyData.resources.length; i++){
+//     var paragraph = storyData.resources[i].paragraph;
+//     console.log(paragraph);
+//     return getParagraph();
+//   };
+// };
+//
 
-  // for (let paragraph in storyData.resources) {
-  //   console.log(storyData.resources[paragraph]);
-  // }
 module.exports = {
   getParagraph,
 

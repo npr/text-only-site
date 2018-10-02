@@ -8,31 +8,30 @@
 </head>
 <body>
   <div class= "full-container" style= "display: block; margin-left: 18px;">
-  <p>Text-Only Version Site of NPR.org <a href="https://www.npr.org" style= "margin-left: 8px;">Full Version</a></p>
-    <div class= "story-container" style= "border-top: 3px solid blue;">
-      <h4> NPR.org | <%= publication %></h4>
-      <p><%= title %></p>
-      <p>By <%= author %></p>
-      <p><%= fullPubDate %> • <strong><i>Updated: <%= fullUpdatedDate %></i></strong></p>
+    <p>Text-Only Version of NPR.org <a href="https://www.npr.org" style= "margin-left: 18px;">Full Version</a></p>
+      <div class= "story-container">
+        <h4> NPR.org | <%= publication %></h4>
+        <hr width= "75%" align= "left" color= "3366CC" size= "5" NOSHADE>
 
+        <p><%= title %></p>
+        <p>By <%= author %></p>
+        <p><%= fullPubDate %> • <strong><i>Updated: <%= fullUpdatedDate %></i></strong></p>
 
-      <div class= "paragraph-container" style= "width: 75%; text-align: justify; word-spacing: -2px; line-height: 130%;">
-        <p><%= storyData.resources[6].paragraph %></p>
-        <p><%= storyData.resources[7].paragraph %></p>
-        <p><%= storyData.resources[8].paragraph %></p>
-        <p><%= storyData.resources[9].paragraph %></p>
-        <p><%= storyData.resources[10].paragraph %></p>
-      </div>
+        <div class= "paragraph-container" style= "width: 75%; text-align: justify; word-spacing: -2px; line-height: 130%;">
+          <% for (var i= 0; i < storyData.resources.length; i++){ %>
+          <%   var paragraphs = storyData.resources[i].paragraph %>
+              <p><%= paragraphs %></p>
+        <% } %>
+        </div>
 
-        <ul class= "web-links">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Permissions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <p>&copy NPR</p>
-
+          <ul class= "web-links-container">
+            <li style="display: inline; padding-right: 20px;"><a href="#">Contact Us</a></li>
+            <li style="display: inline; padding-right: 20px;"><a href="#">Terms of Use</a></li>
+            <li style="display: inline; padding-right: 20px;"><a href="#">Permissions</a></li>
+            <li style="display: inline;"><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <p>&copy NPR</p>
     </div>
   </div>
 </body>

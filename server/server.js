@@ -31,9 +31,7 @@ app.get('/', (req, res) => {
     author: storyData.resources[3].title,
     publication: storyData.resources[0].title,
   });
-
 });
-
 
 app.listen(port, () => {
   console.log(`Server is up on ${port}`);
