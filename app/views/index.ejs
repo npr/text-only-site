@@ -13,14 +13,14 @@
         <h4> NPR.org | <%= publication %></h4>
         <hr width= "75%" align= "left" color= "3366CC" size= "5" NOSHADE>
 
-        <p><%= title %></p>
+        <h4><%= title %></h4>
         <p>By <%= author %></p>
         <p><%= fullPubDate %> • <strong><i>Updated: <%= fullUpdatedDate %></i></strong></p>
 
         <div class= "paragraph-container" style= "width: 75%; text-align: justify; word-spacing: -2px; line-height: 130%;">
           <% for (var i= 0; i < storyData.resources.length; i++){ %>
           <%   var paragraphs = storyData.resources[i].paragraph %>
-              <p><%= paragraphs %></p>
+              <p><%- paragraphs %></p>
         <% } %>
         </div>
 
