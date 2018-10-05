@@ -7,32 +7,43 @@
   <title>Document</title>
 </head>
 <body>
-  <div class= "full-container" style= "display: block; margin-left: 18px;">
-    <p>Text-Only Version of NPR.org <a href="https://www.npr.org" style= "margin-left: 18px;">Full Version</a></p>
-      <div class= "story-container">
-        <h4> NPR.org | <%= publication %></h4>
-        <hr width= "75%" align= "left" color= "3366CC" size= "5" NOSHADE>
+  <div class= "full-container" style= "display: block; margin-left: 20px;">
+    <p>Text-Only Version of NPR.org <a href="https://www.npr.org" style= "margin-left: 15px;">Full Version</a></p>
+    <div class= "story-container">
+      <p><a href="#">Home</a></p>
+      <h4> NPR.org | <%= publication %></h4>
+      <hr width= "75%" align= "left" color= "3366CC" size= "5" NOSHADE>
 
+      <div class= "story-head" style="line-height: 80%;">
         <h4><%= title %></h4>
         <p>By <%= author %></p>
-        <p><%= fullPubDate %> • <strong><i>Updated: <%= fullUpdatedDate %></i></strong></p>
 
-        <div class= "paragraph-container" style= "width: 75%; text-align: justify; word-spacing: -2px; line-height: 130%;">
-          <% for (var i= 0; i < storyData.resources.length; i++){ %>
-          <%   var paragraphs = storyData.resources[i].paragraph %>
-              <p><%- paragraphs %></p>
+        <% if(pubDate.getTime() == updatedDate.getTime()) { %>
+          <p><%= fullPubDate %></p>
+        <!-- days are same & times differ/ only updated time will render -->
+         <% } else if((updatedDate > pubDate) && (updatedDate.getDate() == pubDate.getDate()) && (updatedDate.getMonth() == pubDate.getMonth()) && (updatedDate.getFullYear() == pubDate.getFullYear())){ %>
+          <p><%= fullPubDate %> • <strong><i>Updated: <%= shortTimeUpdatedDate %></i></strong></p>
+         <!-- days are different/ day and time will render -->
+        <% } else if((updatedDate > pubDate)){ %>
+          <p><%= fullPubDate %> • <strong><i>Updated: <%= fullUpdatedDate %></i></strong></p>
         <% } %>
-        </div>
+      </div>
+      <hr width= "75%" align= "left" color= "gray" size= "1" NOSHADE>
+      <div class= "paragraph-container" style= "width: 75%; text-align: justify; word-spacing: -2px; line-height: 140%;">
+        <% for (var i= 0; i < singleStoryData.resources.length; i++){ %>
+          <% var paragraphs = singleStoryData.resources[i].paragraph %>
+            <p><%- paragraphs %></p>
+        <% } %>
+      </div>
 
-          <ul class= "web-links-container">
-            <li style="display: inline; padding-right: 20px;"><a href="#">Contact Us</a></li>
-            <li style="display: inline; padding-right: 20px;"><a href="#">Terms of Use</a></li>
-            <li style="display: inline; padding-right: 20px;"><a href="#">Permissions</a></li>
-            <li style="display: inline;"><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <p>&copy NPR</p>
+      <p class= "web-links-container">
+        <li style="display: inline; padding-right: 20px;"><a href="#">Contact Us</a></li>
+        <li style="display: inline; padding-right: 20px;"><a href="#">Terms of Use</a></li>
+        <li style="display: inline; padding-right: 20px;"><a href="#">Permissions</a></li>
+        <li style="display: inline;"><a href="#">Privacy Policy</a></li>
+      </p>
     </div>
+    <p>&copy NPR</p>
   </div>
 </body>
 </html>
