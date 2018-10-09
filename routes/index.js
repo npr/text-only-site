@@ -26,3 +26,28 @@ exports.singleStory = (req, res) => {
 
   });
 };
+
+
+exports.singleStoryBlock = (req, res) => {
+  const singleStoryDataBlock = require('../app/model/singleStoryDataBlock.json');
+  // const pubDate = new Date(singleStoryDataBlock.resources[2].value);
+  // const fullPubDate= dateFormat(pubDate, 'fullDate');
+  // const updatedDate = new Date (singleStoryDataBlock._meta.lastModified);
+  // const fullUpdatedDate = dateFormat(updatedDate, 'fullDate');
+  // const shortTimeUpdatedDate = dateFormat(updatedDate, 'h:MM TT Z');
+
+
+  res.render('../app/views/singleStoryBlock', {
+    singleStoryDataBlock: singleStoryDataBlock,
+    title: singleStoryDataBlock.resources[1].value,
+    // pubDate: pubDate,
+    // updatedDate: updatedDate,
+    // fullPubDate: fullPubDate,
+    // fullUpdatedDate: fullUpdatedDate,
+    // shortTimeUpdatedDate: shortTimeUpdatedDate,
+    author: singleStoryDataBlock.resources[3].authors[0].title,
+    publication: singleStoryDataBlock.resources[0].title,
+    blockQuote: singleStoryDataBlock.resources.blockTag,
+
+  });
+};

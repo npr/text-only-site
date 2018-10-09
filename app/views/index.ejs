@@ -7,15 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <div class= "full-container" style= "display: block; margin-left: 20px;">
+  <div class= "full-container" style= "display: block; margin-left: 20px; width: 75%;">
     <p>Text-Only Version of NPR.org <a href="https://www.npr.org" style= "margin-left: 15px;">Full Version</a></p>
     <div class= "story-container">
       <p><a href="#">Home</a></p>
       <h4> NPR.org | <%= publication %></h4>
-      <hr width= "75%" align= "left" color= "3366CC" size= "5" NOSHADE>
+      <hr align= "left" color= "3366CC" size= "5" NOSHADE>
 
       <div class= "story-head" style="line-height: 80%;">
-        <h4><%= title %></h4>
+        <h4 style="line-height: 160%;"><%= title %></h4>
         <p>By <%= author %></p>
 
         <% if(pubDate.getTime() == updatedDate.getTime()) { %>
@@ -23,13 +23,13 @@
         <!-- days are same & times differ/ only updated time will render -->
          <% } else if((updatedDate > pubDate) && (updatedDate.getDate() == pubDate.getDate()) && (updatedDate.getMonth() == pubDate.getMonth()) && (updatedDate.getFullYear() == pubDate.getFullYear())){ %>
           <p><%= fullPubDate %> • <strong><i>Updated: <%= shortTimeUpdatedDate %></i></strong></p>
-         <!-- days are different/ day and time will render -->
+         <!-- days are different/ updated day and time will render -->
         <% } else if((updatedDate > pubDate)){ %>
           <p><%= fullPubDate %> • <strong><i>Updated: <%= fullUpdatedDate %></i></strong></p>
         <% } %>
       </div>
-      <hr width= "75%" align= "left" color= "gray" size= "1" NOSHADE>
-      <div class= "paragraph-container" style= "width: 75%; text-align: justify; word-spacing: -2px; line-height: 140%;">
+      <hr align= "left" color= "gray" size= "1" NOSHADE>
+      <div class= "paragraph-container" style= "text-align: justify; word-spacing: -2px; line-height: 140%; padding-bottom: 10px;">
         <% for (var i= 0; i < singleStoryData.resources.length; i++){ %>
           <% var paragraphs = singleStoryData.resources[i].paragraph %>
             <p><%- paragraphs %></p>

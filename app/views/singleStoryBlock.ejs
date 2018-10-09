@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .full-container {
+    display: block;
+    margin-left: 25px;
+    width: 75%;
+  }
+  .story-head{
+    line-height: 80%;
+  }
+  .paragraph-container{
+    text-align: justify;
+    word-spacing: -2px;
+    line-height: 140%;
+  }
+  .lower-nav-container{
+    margin-top: 30px;
+  }
+  .lower-nav-container li{
+    margin-left: 0;
+    display: inline;
+    padding-right: 20px;
+  }
+</style>
+
+<body>
+  <div class= "full-container">
+    <p>Text-Only Version of NPR.org <a href="https://www.npr.org" style= "margin-left: 15px;">Full Version</a></p>
+    <div class= "story-container">
+      <p><a href="#">Home</a></p>
+      <h4> NPR.org  |  <%= publication %></h4>
+      <hr class="blue-line" align= "left" color= "3366CC" size= "5" NOSHADE>
+      <div class= "story-head">
+        <h4 style="line-height: 160%;"><%= title %></h4>
+        <p>By <%= author %></p>
+
+      <!-- published date goes here. Still working out kinks -->
+      </div>
+      <hr align= "left" color= "gray" size= "1" NOSHADE>
+      <div class= "paragraph-container">
+        <% for (var i= 0; i < singleStoryDataBlock.resources.length; i++){ %>
+          <% var paragraphs = singleStoryDataBlock.resources[i].paragraphs %>
+          <% var blockTag = singleStoryDataBlock.resources[i].blockTag %>
+            <% if(blockTag === 'blockquote'){ %>
+                <blockquote><%- paragraphs %></blockquote>
+            <% } else if (blockTag === 'hr') { %>
+                  <hr><%- paragraphs %></hr>
+            <% } else if (blockTag === 'ul') { %>
+                  <ul><li><%- paragraphs %></li></ul>
+            <% } else if (blockTag === 'ol') { %>
+                  <ol><li><%- paragraphs %></li></ol>
+            <% } else if (blockTag === 'li') { %>
+                  <li><%- paragraphs %></li>
+            <% } else if (blockTag === 'h3') { %>
+                  <h3><%- paragraphs %></h3>
+            <% } else if (blockTag === 'h6') { %>
+                  <h6><%- paragraphs %></h6>
+            <% } else { %>
+                <p><%- paragraphs %></p>
+          <% } %>
+        <% } %>
+      </div>
+
+      <nav class= "lower-nav-container">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Permissions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </nav>
+    </div>
+    <p>&copy NPR</p>
+  </div>
+</body>
+</html>

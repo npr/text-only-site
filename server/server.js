@@ -15,6 +15,11 @@ var routes = require('../routes');
 // singleStory
 app.get('/', routes.singleStory);
 
+//singleStoryBlock
+app.get('/block', routes.singleStoryBlock);
+
+const singleStoryDataBlock = require('../app/model/singleStoryDataBlock.json');
+singleStoryDataBlock.hasOwnProperty()
 
 app.listen(port, () => {
   console.log(`Server is up on ${port}`);
