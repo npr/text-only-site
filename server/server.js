@@ -11,10 +11,6 @@ const routes = require('../routes');
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 
-// singleStory
-//app.get('/', routes.singleStory);
-
-
 //singleStoryBlock
 app.get('/block', routes.singleStoryBlock);
 
