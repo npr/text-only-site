@@ -12,7 +12,7 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 
 //singleStoryBlock
-app.get('/block', routes.singleStoryBlock);
+app.get('/', routes.singleStoryBlock);
 
 app.listen(port, () => {
   console.log(`Server is up on ${port}`);
