@@ -19,7 +19,6 @@
     line-height: 80%;
   }
   .npr-line {
-
   }
   .title {
     line-height: 160%;
@@ -44,18 +43,18 @@
     <p>Text-Only Version of NPR.org <a class="full-version" href="https://www.npr.org">Full Version</a></p>
     <div class="story-container">
       <p><a href="#">Home</a></p>
-      <h4> NPR.org  |  <%= slug %></h4>
+      <h4> NPR.org  |  <%= story.getSlug() %></h4>
       <hr class="npr-line" align="left" color="3366CC" size="5" NOSHADE>
       <div class="story-head">
-        <h4 class="title"><%= title %></h4>
-        <p>By <%= author %></p>
-        <p style="font-size: 14px;"><%= fullPubDate %> • <%= pubDateTime %></p>
+        <h4 class="title"><%= story.getTitle() %></h4>
+        <p>By <%= story.getAuthor() %></p>
+        <p style="font-size: 14px;"><%= story.getFullPubDate() %> • <%= story.getPubDateTime() %></p>
       </div>
       <hr align="left" color="gray" size="1" NOSHADE>
       <div class="paragraphs-container">
-        <% for (var i= 0; i < singleStoryDataBlock.resources.length; i++){ %>
-          <!-- <% var paragraphs = singleStoryDataBlock.resources[i].paragraphs %> -->
-          <!-- <% var blockTag = singleStoryDataBlock.resources[i].blockTag %> -->
+        <% for (var i= 0; i < story.json.resources.length; i++){ %>
+          <!-- <% var paragraphs = story.json.resources[i].paragraphs %>
+          <% var blockTag = story.json.resources[i].blockTag %> -->
             <% if(blockTag === 'blockquote'){ %>
                 <blockquote><%- paragraphs %></blockquote>
             <% } else if (blockTag === 'hr') { %>
